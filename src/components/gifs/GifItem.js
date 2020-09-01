@@ -30,7 +30,7 @@ const GifItem = ({ gif: { id, src, isFav } }) => {
   const icon = `fa-heart ${fav ? "fas text-danger" : "far"}`;
 
   return (
-    <div className="wrapper user-select-dissabled pb-2">
+    <div className="gif-card wrapper user-select-dissabled pb-2">
       <img className="card" src={src} alt="" style={{ width: "100%" }} />
       <span onClick={onClick} className="fav-glyphicon fav-button">
         <h4>

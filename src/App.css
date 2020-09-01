@@ -40,3 +40,21 @@
   transition: transform 0.1s, color 0.05s;
   color: limegreen;
 }
+
+.fav-button {
+  display: none;
+  opacity: 0.7;
+}
+
+.link-button {
+  display: none;
+  opacity: 0.7;
+}
+
+.gif-card:hover .fav-button {
+  display: block;
+}
+
+.gif-card:hover .link-button {
+  display: block;
+}
