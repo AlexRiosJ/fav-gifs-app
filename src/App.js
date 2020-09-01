@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/js/all.js";
 import "bootswatch/dist/materia/bootstrap.min.css";
 
 import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 import GiphyState from "./context/giphy/GiphyState";
 import Home from "./components/pages/Home";
 import Favorites from "./components/pages/Favorites";
@@ -23,6 +24,7 @@ const App = () => {
               <Route component={NotFound} />
             </Switch>
           </div>
+          <Footer />
         </div>
       </Router>
     </GiphyState>
