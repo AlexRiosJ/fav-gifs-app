@@ -10,6 +10,7 @@ Aplicación para busqueda de GIFs usando la [API de Giphy](https://developers.gi
 - Filtra tu búsqueda por favoritos.
 - Sección de favoritos donde se mostrarán todos los que has guardado.
 - Rejilla de GIFs con relación/aspecto correcto y sin huecos.
+- Pagina 404 Not Found divertida con un GIF de error aleatorio.
 
 ### Implementación
 
@@ -34,7 +35,7 @@ Aplicación para busqueda de GIFs usando la [API de Giphy](https://developers.gi
 
 ### Giphy API
 
-- Se utilizan tres endpoints:
+- Se utilizan cuatro endpoints:
   - `api.giphy.com/v1/gifs/trending`
     - Consulta de GIFs en tendencia.
     - Para la carga principal de Home y el botón de tendencias
@@ -43,6 +44,14 @@ Aplicación para busqueda de GIFs usando la [API de Giphy](https://developers.gi
   - `api.giphy.com/v1/gifs`
     - Consulta de GIFs con lista de IDs.
     - Para la carga de los GIFs favoritos en la sección de favoritos.
+  - `api.giphy.com/v1/gifs/random`
+    - Consulta de un GIF aleatorio con un tag dado.
+    - Para la página 404 Not Found.
+
+### Deploy en Netlify
+
+- Además de CodeSandbox, también puedes encontrar la aplicación corriendo en Netlify.
+  - `https://fav-gifs.netlify.app`
 
 ### Contribución
 
