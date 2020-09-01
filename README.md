@@ -1,68 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ❤️ GIFs App
 
-## Available Scripts
+Aplicación para busqueda de GIFs usando la [API de Giphy](https://developers.giphy.com/).
 
-In the project directory, you can run:
+### Características Principales
 
-### `npm start`
+- Pantalla principal muestra Trending GIFs.
+- Busca GIFs en la barra de búsqueda.
+- Click en el corazón del GIFs y guardalo en favoritos.
+- Filtra tu búsqueda por favoritos.
+- Sección de favoritos donde se mostrarán todos los que has guardado.
+- Rejilla de GIFs con relación/aspecto correcto y sin huecos.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Implementación
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Interfaz con [`create-react-app`](https://create-react-app.dev/) para facilitar el manejo "reactivo" del sitio.
+- Estilo con [Bootswatch](https://bootswatch.com/).
+- Hooks de React para facilitar el manejo del state de la aplicación.
+- React Router para manejo de rutas en la URL.
 
-### `npm test`
+### Retos Superados
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Rejilla de GIFs sin huecos.
+- Agregar favoritos a `localStorage`.
+- Sección de todos los favoritos.
+- Botones de GIFs reactivos y animados.
 
-### `npm run build`
+### Problemas Encontrados
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Archivo de configuración (.env) no es leido desde CodeSandbox.
+  - Sí funciona desde otro editor usando `npm start`.
+  - Para que funcione en CodeSandbox se escribe directamente la API_KEY de Giphy.
+- Al traer las imagenes y esperar a que carguen y se muestran ya aparece el `card` y se muestran los botones del GIF flotando.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Giphy API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Se utilizan tres endpoints:
+  - `api.giphy.com/v1/gifs/trending`
+    - Consulta de GIFs en tendencia.
+    - Para la carga principal de Home y el botón de tendencias
+  - `api.giphy.com/v1/gifs/search`
+    - Consulta de GIFs por búsqueda.
+  - `api.giphy.com/v1/gifs`
+    - Consulta de GIFs con lista de IDs.
+    - Para la carga de los GIFs favoritos en la sección de favoritos.
 
-### `npm run eject`
+### Contribución
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Si queries contribuir, por favor levanta un Issue y Pull Request. Será un gusto revisarlo y colaborar juntos.
