@@ -7,7 +7,8 @@ import "bootswatch/dist/materia/bootstrap.min.css";
 import Navbar from "./components/layout/Navbar";
 import GiphyState from "./context/giphy/GiphyState";
 import Home from "./components/pages/Home";
-import FavoriteGifs from "./components/gifs/FavoriteGifs";
+import Favorites from "./components/pages/Favorites";
+import NotFound from "./components/pages/NotFound";
 
 const App = () => {
   return (
@@ -18,8 +19,8 @@ const App = () => {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/favorites" component={FavoriteGifs} />
-              {/* <Route component={NotFound} /> */}
+              <Route exact path="/favorites" component={Favorites} />
+              <Route component={NotFound} />
             </Switch>
           </div>
         </div>

@@ -7,14 +7,16 @@ import {
   SEARCH_FAV_GIFS,
   SET_LOADING,
   SET_FAV,
-  REMOVE_FAV
+  REMOVE_FAV,
+  GET_NOT_FOUND_GIF
 } from "../types";
 
 const GiphyState = (props) => {
   const initialState = {
     gifs: [],
     favoriteGifs: [],
-    loading: false
+    loading: false,
+    notFoundGif: null
   };
 
   const [state, dispatch] = useReducer(GiphyReducer, initialState);
@@ -110,17 +112,29 @@ const GiphyState = (props) => {
     });
   };
 
+  const getNotFoundGif = async () => {
+    const res = await axios.get(
+      `https://api.giphy.com/v1/gifs/random?api_key=${process.env.REACT_APP_GIPHY_API_KEY}&tag=error`
+    );
+    dispatch({
+      type: GET_NOT_FOUND_GIF,
+      payload: res.data.data.image_url.replace("media3", "media")
+    });
+  };
+
   return (
     <GiphyContext.Provider
       value={{
         gifs: state.gifs,
         favoriteGifs: state.favoriteGifs,
         loading: state.loading,
+        notFoundGif: state.notFoundGif,
         searchGifs,
         searchHomeGifs,
         searchFavoriteGifs,
         setFavGif,
-        removeFavGif
+        removeFavGif,
+        getNotFoundGif
       }}
     >
       {props.children}

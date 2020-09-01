@@ -3,7 +3,8 @@ import {
   SET_LOADING,
   SET_FAV,
   REMOVE_FAV,
-  SEARCH_FAV_GIFS
+  SEARCH_FAV_GIFS,
+  GET_NOT_FOUND_GIF
 } from "../types";
 
 export default (state, action) => {
@@ -51,6 +52,11 @@ export default (state, action) => {
           return e;
         }),
         favoriteGifs: state.favoriteGifs.filter((e) => e.id !== action.payload)
+      };
+    case GET_NOT_FOUND_GIF:
+      return {
+        ...state,
+        notFoundGif: action.payload
       };
     default:
       return state;
