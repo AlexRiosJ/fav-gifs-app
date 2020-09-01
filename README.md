@@ -5,10 +5,10 @@ Aplicación para busqueda de GIFs usando la [API de Giphy](https://developers.gi
 ### Características Principales
 
 - Pantalla principal muestra Trending GIFs.
-- Busca GIFs en la barra de búsqueda.
-- Click en el corazón del GIFs y guardalo en favoritos.
-- Filtra tu búsqueda por favoritos.
-- Sección de favoritos donde se mostrarán todos los que has guardado.
+- Búsqueda de GIFs en la barra de búsqueda apartir de 3 caracteres.
+- Click en el corazón del GIFs para guardarlo en favoritos.
+- Filtrar búsqueda por favoritos.
+- Sección de favoritos donde se mostrarán todos los GIFs guardados.
 - Rejilla de GIFs con relación/aspecto correcto y sin huecos.
 - Pagina 404 Not Found divertida con un GIF de error aleatorio.
 
@@ -51,8 +51,8 @@ Aplicación para busqueda de GIFs usando la [API de Giphy](https://developers.gi
 ### Deploy en Netlify
 
 - Además de CodeSandbox, también puedes encontrar la aplicación corriendo en Netlify.
-  - `https://fav-gifs.netlify.app`
+  - [`https://fav-gifs.netlify.app`](https://fav-gifs.netlify.app)
 
 ### Contribución
 
-Si queries contribuir, por favor levanta un Issue y Pull Request. Será un gusto revisarlo y colaborar juntos.
+Si gustas contribuir, por favor levanta un Issue y Pull Request. Será un gusto revisarlo y colaborar juntos.
